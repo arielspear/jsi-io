@@ -4,7 +4,7 @@ module.exports.words = {};
 var fs = require('fs');
 var options = { encoding: 'utf8' };
 
-var each = function(array1, fn) {
+var each = function(array, fn) {
   var continueIterating = function(array, n, fn) {
     if (n < array.length) {
       fn(array[n]);
@@ -18,16 +18,17 @@ var matchingWords = [];
 fs.readFile('./file1.txt', options, function(err, read){
 	// console.log(read); 
 	array1 = (read.split("\n"));
-	console.log(array1);
+	//console.log(array1);
 	fs.readFile('./file2.txt', options, function(err, read){
 		// console.log(read);
 		array2 = (read.split("\n"));
 		each(array1, function (word1) {
 			each(array2, function (word2) {
-			if (word1 === word2) then .push(matchingWords);
+			if (word1 === word2) matchingWords.push(word1);
 			});
-		}
-		console.log(array2);
+		});
+		console.log(matchingWords);
+		//console.log(array2);
 	});
 });
 

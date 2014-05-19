@@ -10,5 +10,3 @@ program
 	.option('-n, --number', 'shows number of words')
 	.option('-v, --verbose', 'is more verbose, reporting timing information')
 	.parse(process.argv);
-
-	if 

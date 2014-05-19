@@ -1,7 +1,5 @@
 first
 unicorn
-unicorn
-unicorn
 pony
 dance
 flower

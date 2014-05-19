@@ -15,6 +15,7 @@ var each = function(array, fn) {
 };
 var matchingWords = [];
 
+
 fs.readFile('./file1.txt', options, function(err, read){
 	// console.log(read); 
 	array1 = (read.split("\n"));
@@ -28,6 +29,8 @@ fs.readFile('./file1.txt', options, function(err, read){
 			});
 		});
 		console.log(matchingWords);
+		var numMatching = [matchingWords.length];
+		console.log(numMatching);
 		//console.log(array2);
 	});
 });

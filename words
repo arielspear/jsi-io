@@ -1,0 +1,14 @@
+#!/usr/bin/evn node
+
+var program = require('commander');
+var _ = require('./index');
+
+program
+	.version('0.0.1')
+	.option('-h, --help', 'shows help options')
+	.option('-V, --version', 'shows version number')
+	.option('-n, --number', 'shows number of words')
+	.option('-v, --verbose', 'is more verbose, reporting timing information')
+
+
+	.parse(process.argv);

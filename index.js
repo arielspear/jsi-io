@@ -23,18 +23,33 @@ fs.readFile('./file1.txt', options, function(err, read){
 	fs.readFile('./file2.txt', options, function(err, read){
 		// console.log(read);
 		array2 = (read.split("\n"));
-		each(array1, function (word1) {
-			each(array2, function (word2) {
-			if (word1 === word2) matchingWords.push(word1);
-			});
-		});
-		console.log(matchingWords);
-		var numMatching = [matchingWords.length];
-		console.log(numMatching);
-		//console.log(array2);
 	});
 });
 
+var compare = function(array1, array2){
+	each(array1, function(word1){
+		each(array2, function(word2){
+		if (word1 === word2)matchingWords.push(word1);
+		return matchingWords;
+		});
+	}); 
+};
+
+// var compare = (array1, function (word1) {
+// 	each(array2, function (word2) {
+// 	if (word1 === word2) matchingWords.push(word1);
+// 	});
+// });
+// console.log(matchingWords);
+// var numMatching = [matchingWords.length];
+// console.log(numMatching);
+// //console.log(array2);
+
+
+
+module.exports.words.maching = matchingWords;
+
+module.exports.words.num = numMatching;
 
 
 // array1 = (list1.split("\n"));

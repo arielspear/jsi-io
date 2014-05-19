@@ -1,4 +1,4 @@
-#!/usr/bin/evn node
+#!/usr/bin/env node
 
 var program = require('commander');
 var _ = require('./index');
@@ -10,3 +10,7 @@ program
 	.option('-n, --number', 'shows number of words')
 	.option('-v, --verbose', 'is more verbose, reporting timing information')
 	.parse(process.argv);
+
+if (program.number){
+	console.log("There are " + _.num + " matching words.");
+}
